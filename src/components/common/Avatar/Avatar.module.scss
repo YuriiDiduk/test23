@@ -1,0 +1,21 @@
+@import "src/styles/abstracts";
+
+.holder {
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+
+  &.default {
+    border: 1px solid $text-light;
+  }
+}
+
+.icon {
+  @extend %elem-in-center;
+  color: $text-light;
+  font-size: 22px;
+}
+
+.image {
+  width: 100%;
+}

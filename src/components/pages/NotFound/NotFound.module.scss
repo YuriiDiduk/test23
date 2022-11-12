@@ -1,0 +1,94 @@
+@import "src/styles/abstracts";
+
+.container {
+  padding: 32px 30px;
+  height: 100vh;
+
+  @include m(desktop) {
+    padding: 32px 73px;
+  }
+}
+
+.logoWrapper {
+  width: 117px;
+  margin-bottom: 11px;
+}
+
+.logo {
+  width: 100%;
+}
+
+.body {
+  display: flex;
+  justify-content: space-between;
+
+  @include b(mobile) {
+    flex-wrap: wrap;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-right: 20px;
+
+  @include b(mobile) {
+    width: 100%;
+  }
+}
+
+.info {
+  margin: 30px 0;
+  font-weight: 700;
+
+  @include m(1301) {
+    margin: auto 0;
+  }
+}
+
+.largeText {
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+
+.btnGroup {
+  display: flex;
+
+  @include b(1300) {
+    margin-top: 5vw;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  @include m(1301) {
+    margin-bottom: 7vw;
+  }
+
+  button {
+    margin: 10px 0;
+
+    &:first-child {
+      margin-right: 20px;
+    }
+  }
+}
+
+.imgWrap {
+  align-self: flex-start;
+  padding: 8.5% 9%;
+  background-color: $dark;
+  border-radius: 20px;
+
+  @include b(1300) {
+    margin: 30px auto;
+  }
+
+  @include m(mobile) {
+    width: 53%;
+  }
+
+  img {
+    width: 100%;
+  }
+}

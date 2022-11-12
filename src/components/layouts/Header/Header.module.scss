@@ -1,0 +1,51 @@
+@import "src/styles/abstracts";
+
+.container {
+  padding-top: $header-padding-top;
+  padding-bottom: $header-padding-bottom;
+  height: $header-height;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &.static {
+    display: block;
+  }
+}
+
+.content {
+  flex: 1;
+  margin-right: 30px;
+}
+
+.burger {
+  span {
+    font-size: 26px;
+  }
+}
+
+.settingsLink {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  padding-left: 16px;
+
+  @include m(tablet) {
+    width: 391px;
+  }
+}
+
+.avatar {
+  margin-right: 12px;
+}
+
+.email {
+  flex: 1;
+  text-align: start;
+  max-width: 260px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+  vertical-align: top;
+}

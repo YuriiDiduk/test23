@@ -1,0 +1,35 @@
+@import "src/styles/abstracts";
+
+.wrapper {
+  overflow: hidden;
+  display: flex;
+  height: 100vh;
+
+  @include m(tablet) {
+    background-color: $bg;
+    padding: 20px;
+  }
+
+  @include m(tablet) {
+    padding: 60px 30px;
+  }
+
+  @include m(desktop) {
+    padding: 60px 93px;
+  }
+}
+
+.content {
+  background-color: $white;
+  border-radius: 20px;
+  flex: 1;
+  position: relative;
+}
+
+.barOpen {
+  composes: open from '../sidebar/Sidebar.module.scss';
+
+  .content {
+    overflow: hidden;
+  }
+}

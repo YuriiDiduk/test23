@@ -1,0 +1,122 @@
+@import "src/styles/abstracts";
+
+.modal {
+  padding: 10px;
+  display: flex;
+}
+
+.box {
+  background-color: $white;
+  border-radius: $radius-sm;
+  box-shadow: 4px 4px 24px rgba(0, 0, 0, 0.15);
+  max-width: 1440px;
+  width: 100%;
+  padding: 70px 15px;
+  height: 96vh;
+  text-align: center;
+  outline: none;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-self: center;
+  position: relative;
+  z-index: 3;
+
+  @include m(mobile) {
+    height: 83vh;
+  }
+
+  &.small {
+    max-width: 852px;
+    height: auto;
+    max-height: 96vh;
+
+    @include m(mobile) {
+      max-height: 83vh;
+    }
+  }
+
+  &.middle {
+    max-width: 1146px;
+  }
+}
+
+.title {
+  margin-bottom: 20px;
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  z-index: 1;
+
+  @include m(mobile) {
+    top: 30px;
+    right: 20px;
+  }
+
+  span {
+    padding: 0;
+    font-size: 24px;
+  }
+}
+
+.body {
+  @extend %scroll-wrap;
+  @include scroll-container(16px);
+  overflow: auto;
+  max-width: 1098px;
+  width: 100%;
+  margin: 0 auto;
+  height: 100%;
+  overflow-x: hidden;
+
+  @include m(mobile) {
+    min-width: 463px;
+  }
+
+  @include m(1200) {
+    width: 1098px;
+  }
+
+  .middle & {
+    @include m(1100) {
+      width: 1006px;
+    }
+  }
+
+  .small & {
+    @include m(mobile) {
+      width: 100%;
+    }
+  }
+}
+
+.buttons {
+  margin-bottom: 42px;
+  max-width: 463px;
+  margin: 0 auto;
+
+  @include m(500) {
+    display: flex;
+  }
+
+  &:only-child {
+    margin-top: 60px;
+  }
+
+  button {
+    margin-bottom: 10px;
+
+    @include m(500) {
+      width: 50%;
+      margin-bottom: 0;
+    }
+  }
+}

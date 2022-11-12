@@ -1,0 +1,13 @@
+@import "src/styles/abstracts";
+
+.error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-size: 1.375rem;
+  margin-bottom: 10px;
+}
+

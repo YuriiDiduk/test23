@@ -1,0 +1,158 @@
+@import "src/styles/abstracts";
+
+.group {
+  @include m(1200) {
+    display: flex;
+    width: 100%;
+  }
+
+  .field,
+  > button {
+    width: 100%;
+
+    @include m(1200) {
+      width: 50%;
+    }
+
+    &:first-child {
+      margin-right: 64px;
+    }
+
+    &:only-child {
+      margin-right: 0;
+      margin-left: auto;
+
+      &.field {
+        @include m(1200) {
+          padding-left: 32px;
+        }
+      }
+
+      &[type="submit"] {
+        width: calc(50% - 32px);
+      }
+    }
+  }
+}
+
+.field {
+  position: relative;
+  margin-bottom: 16px;
+  text-align: left;
+  font-weight: 500;
+  font-size: 14px;
+
+  .emailForm & {
+    margin-bottom: 0;
+    transform: translateY(-1px);
+    font-size: 16px;
+    font-weight: 400;
+    flex: 1;
+  }
+}
+
+.search {
+  margin-bottom: 0;
+}
+
+.label {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.errorText {
+  position: absolute;
+  color: $alert;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.chevron {
+  font-size: 24px;
+  margin-right: 8px;
+  position: absolute;
+  right: 8px;
+}
+
+.placeholder {
+  color: $text-light;
+}
+
+.textarea {
+  width: 100%;
+  border-radius: $radius-sm;
+  padding: 16px;
+  resize: none;
+  border-color: $accent;
+  background-color: $bg-green;
+  line-height: inherit;
+  font-weight: inherit;
+
+  &:hover,
+  &:focus {
+    border-color: $green-middle;
+    outline: none;
+  }
+}
+
+.emailForm {
+  margin-top: 20px;
+  padding: 24px 20px;
+  text-align: left;
+  background-color: $bg;
+  border-radius: $radius-sm;
+  font-size: 16px;
+
+  .textarea {
+    border-width: 0;
+    background-color: $white;
+    font-size: 16px;
+  }
+}
+
+.emailData {
+  margin-bottom: 24px;
+}
+
+.emailFormRow {
+  padding: 17px 0 7px;
+  margin: 0 20px;
+  border-bottom: 1px solid $border;
+  display: flex;
+  align-items: baseline;
+
+  &:not(:last-child) {
+    overflow: hidden;
+  }
+
+  .errorText {
+    top: 33px;
+  }
+}
+
+.emailTitleRow {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.delimiter {
+  @include delimiter(12);
+}
+
+.btnGroup {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 19px;
+
+  & > button:last-child {
+    margin: 0 20px 0 40px;
+  }
+}

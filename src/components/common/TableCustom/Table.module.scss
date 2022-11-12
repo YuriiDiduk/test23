@@ -1,0 +1,246 @@
+@import "src/styles/abstracts";
+
+.wrapper {
+  height: calc(100% - #{$page-header-height-mob});
+  width: calc(100vw - 30px);
+  overflow-y: hidden;
+  overflow-x: auto;
+
+  @include m(mobile) {
+    height: calc(100% - #{$page-header-height});
+  }
+
+  @include m(tablet) {
+    width: calc(100vw - #{$sidebar_width} - 110px);
+  }
+
+  @include m(desktop) {
+    width: calc(100vw - #{$sidebar_width} - 236px);
+  }
+
+  @include m(1600) {
+    &.faq {
+      height: 100%;
+    }
+  }
+}
+
+.inner {
+  height: 100%;
+  min-width: fit-content;
+
+  &:not(.striped) {
+    .row {
+      &:not(:last-child):not(.header) {
+        border-bottom: 1px solid $border;
+      }
+    }
+  }
+}
+
+.rows {
+  height: calc(100% - 60px);
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  .faq & {
+    height: 100%;
+  }
+}
+
+.row {
+  cursor: default;
+  transition: 0.2s background-color;
+
+  &:not(.header):hover {
+    .editButtons {
+      visibility: visible;
+    }
+  }
+
+  .striped &:nth-child(even) {
+    background-color: $bg-zebra;
+  }
+
+  .striped &:not(.header):hover {
+    background-color: $bg;
+  }
+}
+
+.flexRow {
+  display: flex;
+  justify-content: space-between;
+
+  &:not(.selected) .editButtons {
+    visibility: hidden;
+  }
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.editButtons {
+  display: flex;
+  align-items: center;
+}
+
+.editBtn {
+  @extend %btnreset;
+  font-size: 24px;
+  color: $text-light;
+  padding: 0 8px;
+  cursor: pointer;
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: default;
+  }
+}
+
+.submit {
+  &:not(:disabled) {
+    color: $accent;
+  }
+
+  &:disabled {
+    cursor: default;
+  }
+}
+
+.formTable {
+  margin-left: -16px;
+  margin-bottom: 0;
+  position: relative;
+  z-index: 1000;
+  width: 100%;
+}
+
+.cellData {
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.loading {
+  composes: loading from "../LoadingDots/Dots.module.scss";
+}
+.empty {
+  position: relative;
+
+  ul {
+    left: 50%;
+    top: 40px;
+    transform: translateX(-50%);
+  }
+}
+
+.faqTitleIcon {
+  align-self: flex-start;
+  font-size: 24px;
+  color: $text-light;
+  margin: -1px 0 0 -21px;
+
+  &:not(.formTable) {
+    padding: 10px 0;
+  }
+}
+
+.faqTitle {
+  font-size: 18px;
+  font-weight: 700;
+  align-self: flex-start;
+
+  &.formTable {
+    width: 356px;
+  }
+
+  &:not(.formTable) {
+    padding: 8px 0;
+  }
+}
+
+.faqBody {
+  font-size: 16px;
+  font-weight: 400;
+  width: calc(100% + 16px);
+
+  &.formTable {
+    textarea {
+      padding: 10px 16px;
+    }
+  }
+
+  &:not(.formTable) {
+    padding: 11px 0;
+  }
+}
+
+.faqEdit {
+  align-self: flex-start;
+  &:not(.formTable) {
+    padding: 10px 0;
+  }
+}
+
+.answered {
+  color: $accent;
+  font-size: 12px;
+  margin-left: -3px;
+  margin-right: 18px;
+}
+
+.notAnswered {
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: $text-light;
+  margin-right: 23px;
+
+  &.unread {
+    background-color: $accent;
+  }
+}
+
+.textMessage {
+  display: flex;
+}
+
+.replyIcon {
+  font-size: 24px;
+  color: $text-light;
+  margin-right: 16px;
+}
+
+.reply {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  white-space: normal;
+}
+
+.room {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  left: 0;
+  width: 100%;
+  background-color: $white;
+}
+
+.roomHeader {
+  padding-top: $header-padding-top;
+  padding-bottom: $header-padding-bottom;
+  height: $header-height;
+}
+
+.backBtn {
+  margin-left: -20px;
+}
+
+.roomBody {
+  position: relative;
+  background-color: $white;
+  z-index: 1;
+}

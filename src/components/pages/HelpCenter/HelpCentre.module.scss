@@ -1,0 +1,12 @@
+@import "src/styles/abstracts";
+
+.report {
+  &:not(:only-child) {
+    margin-right: 24px;
+  }
+}
+
+.reportModalInfo {
+  max-width: 558px;
+  margin: 0 auto 70px;
+}

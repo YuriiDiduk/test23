@@ -1,0 +1,449 @@
+import * as React from "react";
+
+type Props = {
+  id: number;
+};
+
+export const Terms = ({ id }: Props) => {
+  switch (id) {
+    case 1:
+      return (
+        <>
+          <h3>Please read these licence terms carefully</h3>
+          <p>
+            BY CLICKING ON THE "ACCEPT" BUTTON BELOW YOU AGREE TO THESE TERMS
+            WHICH WILL BIND YOU.
+          </p>
+          <p>
+            Please note that if you are wishing to participate in a medical
+            trial/pilot candidate where the trial is linked to the App (as
+            defined hereinbelow), you will only be able to participate by
+            downloading and using the App, subject to these terms.
+          </p>
+          <h3>Who we are and what this agreement does</h3>
+          <p>
+            We, Nexus Digital Technology of L2-8 Ivy Business Centre Crown
+            Street, Failsworth, Manchester, England, M35 9BG, license you to
+            use:
+          </p>
+          <ul>
+            <li>
+              Nexus App B2H mobile application software, the data supplied with
+              the software, <strong>(App)</strong> and any updates or
+              supplements to it.
+            </li>
+            <li>
+              The related electronic documentation which may include clinical
+              documentation <strong>(Documentation)</strong>
+            </li>
+            <li>
+              The trial/pilot you connect to via the App and the content we
+              provide to you through it <strong>(Service).</strong>
+            </li>
+          </ul>
+          <p>
+            Please note the following words have the meaning given below, when
+            used in these Terms.
+          </p>
+          <ul>
+            <li>
+              The medical trial or pilot for which you may wish to participate
+              by using this App <strong>(Pilot).</strong>
+            </li>
+            <li>
+              The NHS Trust or other medical body who is responsible for your
+              treatment or otherwise recommended you for the Pilot
+              <strong>(Trust).</strong>
+            </li>
+          </ul>
+          <p>as permitted in these terms.</p>
+          <h3>Your privacy</h3>
+          <p>
+            We only use any personal data we collect through your use of the App
+            and the Service in the ways set out in our privacy policy available
+            on.
+          </p>
+          <p>
+            Please be aware that internet transmissions are never completely
+            private or secure and that any message or information you send using
+            the App or any Service may be read or intercepted by others, even if
+            there is a special notice that a particular transmission is
+            encrypted.
+          </p>
+          <h3>Other terms also apply</h3>
+          <p>
+            The ways in which you can use the App and Documentation may also be
+            controlled by either (i) the Google Play's terms and policies
+            accessible directly or indirectly on{" "}
+            <a
+              href="https://play.google.com/intl/en_ie/about/play-terms/"
+              target="_blank"
+            >
+              https://play.google.com/intl/en_ie/about/play-terms/
+            </a>{" "}
+            as updated from time to time; or (ii) the Apple
+          </p>
+          <p>
+            Appstore terms and policies accessible directly or indirectly on{" "}
+            <a href="https://www.apple.com/uk/ios/appstore/" target="_blank">
+              https://www.apple.com/uk/ios/appstore/
+            </a>
+          </p>
+        </>
+      );
+    case 2:
+      return (
+        <>
+          <p>
+            When downloading the App you will be requested to create an account
+            with us.
+          </p>
+          <p>
+            You will be provided with a user identification code, password or
+            any other piece of information as part of our security procedures,
+            and you must treat such information as confidential and personal to
+            you. You must not disclose your identification and security
+            information to any third party nor use any third party's
+            identification and security information to access our site. Except
+            where you have registered a representative with us, in which case
+            you may disclose your identification and security information to
+            that person only.
+          </p>
+          <p>
+            Unless you wish to become a full Nexus user and receive our other
+            services as well as wider access to our website, App and other
+            platforms, your access to the App (and processing of your personal
+            data) will end at the end of the relevant Pilot or at your request
+            as provided below, whichever takes place sooner.
+          </p>
+          <p>
+            You have the right to request to withdraw from the trial and have
+            your account cancelled and your personal data excluded at anytime.
+            If you wish to do so, contact us on{" "}
+            <a href="mailto:info@nexus-dt.com">info@nexus-dt.com</a>, or close
+            your account in the App, and we will support your request.
+          </p>
+          <p>
+            We have the right to disable any user identification code or
+            password at any time, if in our reasonableopinion you have failed to
+            comply with any of the provisions of these terms. If you know or
+            suspect that anyone other than you (or your authorised
+            representative as provided hereinabove) knows your user
+            identification code or password, you must promptly notify us using
+            the <a href="#">Contacting Us</a> details below.
+          </p>
+        </>
+      );
+    case 3:
+      return (
+        <>
+          <h3>How to tell us about problems</h3>
+          <h4>Contacting us (including with complaints).</h4>
+          <p>
+            If you think the App or the Services are faulty or misdescribed or
+            wish to contact us for any other reason please email our customer
+            service team at{" "}
+            <a href="mailto:info@nexus-dt.com">info@nexus-dt.com</a>
+          </p>
+          <h4>How we will communicate with you.</h4>
+          <p>
+            If we have to contact you we will do so by email, or via the App,
+            using the contact details you have provided to us.
+          </p>
+          <h4>Pilot Information.</h4>
+          <p>
+            If you would like more information on the particular Pilot you are
+            participating in you may contact your Trust using their contact
+            details, or contact us using{" "}
+            <a href="mailto:info@nexus-dt.com">info@nexus-dt.com</a> and we will
+            try to assist.
+          </p>
+          <h3>
+            How you may use the App, including how many devices you may use it
+            on
+          </h3>
+          <p>In return for your agreeing to comply with these terms you may:</p>
+          <ul>
+            <li>
+              download or stream a copy of the App onto your mobile and view,
+              use and display the App and the Service on such devices for your
+              personal purposes only in relation to the Pilot.
+            </li>
+            <li>
+              use any Documentation to support your permitted use of the App and
+              the Service.
+            </li>
+          </ul>
+          <h3>You must be 18 to accept these terms and buy the App</h3>
+          <p>You must be 18 or over to accept these terms and use the App. </p>
+          <h3>You may not transfer the App to someone else</h3>
+          <p>
+            We are giving you personally the right to use the App and the
+            Service as set out above. You may not otherwise transfer the App or
+            the Service to someone else, whether for money, for anything else or
+            for free. If you sell any device on which the App is installed, you
+            must remove the App from it
+          </p>
+          <h3>Changes to these terms</h3>
+          <p>
+            We may need to change these terms to reflect changes in law or best
+            practice or to deal with additional features which we introduce. In
+            case we consider any of the changes a material change, we will
+            notify you of a change when you next start the App.
+          </p>
+          <p>
+            If you do not accept the notified changes you will not be permitted
+            to continue to use the App and the Service.
+          </p>
+          <h3>Update to the App and changes to the service</h3>
+          <p>
+            From time to time, we may automatically update the App and change
+            the Service to improve performance, enhance functionality, reflect
+            changes to the operating system or address security issues.
+            Alternatively, we may ask you to update the App for these reasons.
+          </p>
+          <p>
+            If you choose not to install such updates or if you opt out of
+            automatic updates you may not be able to continue using the App and
+            the Services.
+          </p>
+          <h3>If someone else owns the phone or device you are using</h3>
+          <p>
+            If you download or stream the App onto any phone or other device not
+            owned by you, you must have the owner's permission to do so. You
+            will be responsible for complying with these terms, whether or not
+            you own the phone or other device.
+          </p>
+          <h3>We may collect technical data about your device</h3>
+          <p>
+            By using the App or any of the Services, you agree to us collecting
+            and using technical information about the devices you use the App on
+            and related software, hardware and peripherals to improve our
+            products and to provide any Services to you.
+          </p>
+          <h3>We are not responsible for other websites you link to</h3>
+          <p>
+            The App or any Service may contain links to other independent
+            websites which are not provided by us. Such independent sites are
+            not under our control, and we are not responsible for and have not
+            checked and approved their content or their privacy policies (if
+            any).
+          </p>
+          <p>
+            You will need to make your own independent judgement about whether
+            to use any such independent sites, including whether to buy any
+            products or services offered by them.
+          </p>
+        </>
+      );
+    case 4:
+      return (
+        <>
+          <p>You agree that you will:</p>
+          <ul>
+            <li>
+              not rent, lease, sub-license, loan, provide, or otherwise make
+              available, the App or the Services in any form, in whole or in
+              part to any person without prior written consent from us;
+            </li>
+            <li>
+              not copy the App, Documentation or Services, except as part of the
+              normal use of the App or where it is necessary for the purpose of
+              back-up or operational security;
+            </li>
+            <li>
+              not translate, merge, adapt, vary, alter or modify, the whole or
+              any part of the App, Documentation or Services nor permit the App
+              or the Services or any part of them to be combined with, or become
+              incorporated in, any other programs, except as necessary to use
+              the App and the Services on devices as permitted in these terms;
+            </li>
+          </ul>
+          <h3>
+            Not disassemble, de-compile, reverse engineer or create derivative
+            works based on the whole or any part of the App or the services nor
+            attempt to do any such things, except as may be permitted by and in
+            accordance with (by virtue of sections 50b and 296a of the
+            copyright, designs and patterns act 1988) acceptable use
+            restrictions
+          </h3>
+          <p>You must:</p>
+          <ul>
+            <li>
+              not use the App or any Service in any unlawful manner, for any
+              unlawful purpose, or in any manner inconsistent with these terms,
+              or act fraudulently or maliciously, for example, by hacking into
+              or inserting malicious code, such as viruses, or harmful data,
+              into the App, any Service or any operating system;
+            </li>
+            <li>
+              not infringe our or our licensors' intellectual property rights or
+              those of any third party in relation to your use of the App or any
+              Service, (to the extent that such use is not licensed by these
+              terms);
+            </li>
+            <li>
+              not transmit any material that is defamatory, offensive or
+              otherwise objectionable;
+            </li>
+            <li>
+              not use the App or any Service in a way that could damage,
+              disable, overburden, impair or compromise our systems or security
+              or interfere with other users; and
+            </li>
+            <li>
+              not collect or harvest any information or data from any Service or
+              our systems. Intellectual property rights
+            </li>
+          </ul>
+          <p>
+            All intellectual property rights in the App, the Documentation and
+            the Services throughout the world belong to us (or our licensors)
+            and the rights in the App and the Services are licensed (not sold)
+            to you. You have no intellectual property rights in, or to, the App,
+            the Documentation or the Services other than the right to use them
+            in accordance with these terms.
+          </p>
+          <h3>Our responsibility for loss or damage suffered by you</h3>
+          <h4>
+            We are responsible to you for foreseeable loss and damage caused by
+            us.
+          </h4>
+          <p>
+            If we fail to comply with these terms, we are responsible for loss
+            or damage you suffer that is a foreseeable result of our breaking
+            these terms or our failing to use reasonable care and skill, but we
+            are not responsible for any loss or damage that is not foreseeable.
+            Loss or damage is foreseeable if either it is obvious that it will
+            happen or if, at the time you accepted these terms, both we and you
+            knew it might happen.
+          </p>
+          <h4>
+            We do not exclude or limit in any way our liability to you where it
+            would be unlawful to do so.
+          </h4>
+          <p>
+            This includes liability for death or personal injury caused by our
+            negligence or the negligence of our employees, agents or
+            subcontractors or for fraud or fraudulent misrepresentation.
+          </p>
+          <h4>When we are liable for damage to your property.</h4>
+          <p>
+            If defective digital content that we have supplied damages a device
+            or digital content belonging to you, we will either repair the
+            damage or pay you compensation. However, we will not be liable for
+            damage that you could have avoided by following our advice to apply
+            an update offered to you free of charge or for damage that was
+            caused by you failing to correctly follow installation instructions
+            or to have in place the minimum system requirements advised by us.
+          </p>
+          <h4>We are not liable for business losses.</h4>
+          <p>
+            The App is for domestic and private use. If you use the App for any
+            commercial, business or resale purpose we will have no liability to
+            you for any loss of profit, loss of business, business interruption,
+            or loss of business opportunity.
+          </p>
+          <h4>Limitations to the App and the Services.</h4>
+          <p>
+            The App and the Services are provided for general medical purposes
+            only. They do not offer advice on which you should rely. You must
+            obtain professional or specialist advice before taking, or
+            refraining from, any action on the basis of information obtained
+            from the App or the Service. We would always direct you to your
+            Trust or GP. Although we make reasonable efforts to update the
+            information provided by the App and the Service, we make no
+            representations, warranties or guarantees, whether express or
+            implied, that such information is accurate, complete or up to date.
+          </p>
+          <h3>We may end your rights to use the App and the services</h3>
+          <h4>If you break these terms.</h4>
+          <p>
+            We may end your rights to use the App and Services at any time by
+            contacting you if you have broken these terms in a serious way. If
+            what you have done can be put right we will give you a reasonable
+            opportunity to do so.
+          </p>
+          <h4>If a Pilot Ends.</h4>
+          <p>
+            If the Pilot you are involved with ends, for any reason, or you
+            otherwise choose to no longer take part, you will no longer be
+            permitted to use the App or Service, unless you have decided to
+            become a Nexus user for our wider platforms and services.
+          </p>
+          <p>
+            If your Pilot ends, you choose to leave a Plot or close your
+            account, or if we end your rights to use the App and Services:
+          </p>
+          <ul>
+            <li>
+              You must stop all activities authorised by these terms, including
+              your use of the App and any Services.
+            </li>
+            <li>
+              You must delete or remove the App from all devices in your
+              possession and immediately destroy all copies of the App which you
+              have and confirm to us that you have done this.
+            </li>
+            <li>
+              We may remotely access your devices and remove the App from them
+              and cease providing you with access to the Services.
+            </li>
+          </ul>
+          <h3>We may transfer this agreement to someone else</h3>
+          <p>
+            We may transfer our rights and obligations under these terms to
+            another organisation. We will always tell you in writing if this
+            happens and we will ensure that the transfer will not affect your
+            rights under the contract.
+          </p>
+          <h3>You CANNOT transfer your rights to someone else</h3>
+          <p>
+            Use of the App is personal for you because it relates to a specific
+            Pilot.
+          </p>
+          <h3>No rights for third parties</h3>
+          <p>
+            This agreement does not give rise to any rights under the Contracts
+            (Rights of Third Parties) Act 1999 to enforce any term of this
+            agreement.
+          </p>
+          <h3>
+            If a court finds part of this contract illegal, the rest will
+            continue in force
+          </h3>
+          <p>
+            Each of the paragraphs of these terms operates separately. If any
+            court or relevant authority decides that any of them are unlawful,
+            the remaining paragraphs will remain in full force and effect
+          </p>
+          <h3>
+            Even if we delay in enforcing this contract, we can still enforce it
+            later
+          </h3>
+          <p>
+            Even if we delay in enforcing this contract, we can still enforce it
+            later. If we do not insist immediately that you do anything you are
+            required to do under these terms, or if we delay in taking steps
+            against you in respect of your breaking this contract, that will not
+            mean that you do not have to do thos things and it will not prevent
+            us taking steps against you at a later date.
+          </p>
+          <h3>
+            Which laws apply to this contract and where you may bring legal
+            proceedings
+          </h3>
+          <p>
+            These terms are governed by English law and you can bring legal
+            proceedings in respect of the products in the English courts. If you
+            live in Scotland you can bring legal proceedings in respect of the
+            products in either the Scottish or the English courts. If you live
+            in Northern Ireland you can bring legal proceedings in respect of
+            the products in either the Northern Irish or the English courts.
+          </p>
+        </>
+      );
+    default:
+      return null;
+  }
+};

@@ -1,0 +1,204 @@
+:root {
+  --text-main: #182c47;
+  --accent: #8adec6;
+  --alert: #d40033;
+  --toastify-font-family: $font;
+  --toastify-text-color-light: var(--text-main);
+  --toastify-icon-color-success: var(--accent);
+  --toastify-icon-color-error: var(--alert);
+  --toastify-color-progress-success: var(--accent);
+  --toastify-color-progress-error: var(--alert);
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: $scroll_track;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $scroll_thumb;
+  border-radius: 3px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $scroll_thumb;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px #f3fcf9 inset;
+  -webkit-text-fill-color: $text-main !important;
+}
+
+.auth {
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px #fff inset;
+  }
+}
+
+.search {
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 40px #fff inset;
+  }
+}
+
+html {
+  box-sizing: border-box;
+
+  @include b(mobile) {
+    font-size: 12px;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font: 400 14px/1.4 $font;
+  color: $text-main;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3 {
+  font-weight: 700;
+}
+
+h1,
+.h1 {
+  font-size: 1.875rem;
+  margin: 0;
+}
+
+h2,
+.h2 {
+  font-size: 1.5rem;
+  margin: 0 0 12px;
+}
+
+h3,
+.h3 {
+  font-size: 18px;
+  margin: 0 0 12px;
+}
+
+p {
+  margin: 0 0 20px;
+}
+
+input,
+textarea {
+  color: $text-main;
+  @include placeholderColor($text-light);
+}
+
+.container {
+  padding: 0 15px;
+  height: calc(100% - #{$header-height});
+
+  @include m(tablet) {
+    padding: 0 20px 0 30px;
+  }
+}
+
+.scroll-parent {
+  @extend %scroll-parent;
+}
+
+.mb-40 {
+  margin-bottom: 40px;
+}
+
+.ml-20 {
+  margin-left: 20px;
+}
+
+.right {
+  margin-left: auto;
+}
+
+.bg-block {
+  background: $bg;
+  border-radius: $radius-sm;
+}
+
+.form-modal {
+  position: relative;
+  text-align: left;
+  margin-top: 50px;
+
+  @include m(mobile) {
+    padding-left: calc(#{$upload-width-l} + 86px);
+  }
+
+  .upload {
+    margin-bottom: 40px;
+
+    @include m(mobile) {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  .submit-btn {
+    margin-top: 28px;
+    margin-bottom: 16px;
+  }
+}
+
+.form-modal-simple {
+  max-width: 558px;
+  margin: 0 auto;
+
+  .submit-btn {
+    margin-top: 28px;
+  }
+}
+
+.modal-text {
+  margin: 10px 0 70px;
+}
+
+.shadow-wrap {
+  @include shadow-wrap;
+}
+
+.Toastify__toast-body {
+  align-items: flex-start;
+}
+
+.Toastify__zoom-enter {
+  width: 24px;
+  margin-top: 1px;
+}
+
+@supports ((-webkit-backdrop-filter: none) or (backdrop-filter: none)) {
+  [class*="MuiModal-root"]:not([class*="MuiMenu-root"])
+    > [class*="MuiBackdrop-root-MuiModal-backdrop"] {
+    background-color: transparent !important;
+    filter: blur(3px);
+    backdrop-filter: blur(3px);
+  }
+}

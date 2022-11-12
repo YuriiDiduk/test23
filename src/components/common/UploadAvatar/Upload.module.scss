@@ -1,0 +1,153 @@
+@import "src/styles/abstracts";
+
+.uploadBtn {
+  position: relative;
+  width: $upload-width-s;
+  margin: 0 auto;
+}
+
+.large {
+  width: $upload-width-l;
+
+  .imageWrapper {
+    height: $upload-width-l;
+    background-color: rgba(163, 171, 181, 0.2);
+  }
+
+  .defaultIcon {
+    font-size: 60px;
+  }
+}
+
+.defaultIcon, .overlay {
+  font-size: 24px;
+}
+
+.imageWrapper {
+  display: block;
+  height: $upload-width-s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+  }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: $white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(163, 171, 181, 0.7);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.inputFile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.labelWrapper {
+  display: block;
+  cursor: pointer;
+
+  &:hover {
+    .labelText {
+      color: $accent;
+    }
+  }
+}
+
+.label {
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 16px;
+  cursor: pointer;
+
+  &:hover {
+    .labelText {
+      color: $accent;
+    }
+  }
+
+  .labelText {
+    transition: 0.2s color;
+  }
+}
+
+.iconLabel {
+  font-size: 24px;
+  display: inline-block;
+  margin-right: 12px;
+}
+
+.canvas {
+  border-radius: 50%;
+}
+
+.cropperSave {
+  display: inline-flex;
+  justify-content: center;
+  margin-top: 30px;
+  width: 237px;
+}
+
+.removeBtn {
+  position: relative;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border-radius: 50%;
+    opacity: 0.8;
+    transition: 0.1s background-color;
+  }
+
+  &:hover {
+    &:after {
+      background-color: rgba(163, 171, 181, 0.7);
+    }
+
+    .trash {
+      visibility: visible;
+      z-index: 1;
+    }
+  }
+}
+
+.trash {
+  @extend %elem-in-center;
+  visibility: hidden;
+  font-size: 24px;
+  color: $white;
+}
+
+.cropperWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

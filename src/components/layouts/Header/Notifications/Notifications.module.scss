@@ -1,0 +1,74 @@
+@import "src/styles/abstracts";
+
+.bell {
+  @extend %btnreset;
+  margin-right: 8px;
+  font-size: 26px;
+  color: $text-light;
+  position: relative;
+  align-self: stretch;
+  z-index: 2;
+
+  &:not(:disabled) {
+    cursor: pointer;
+  }
+
+  &.open {
+    &::before {
+      content: "";
+    }
+  }
+
+  &::before {
+    position: absolute;
+    top: 21px;
+    right: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: $alert;
+  }
+
+  span {
+    vertical-align: middle;
+  }
+}
+
+.itemRow {
+  cursor: default;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  margin: 20px;
+  width: 300px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.avatar {
+  margin-right: 10px;
+}
+
+.messageRow {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.message {
+  font-weight: 500;
+}
+
+.text {
+  color: $text-light;
+}
+
+.message {
+  max-width: 243px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  color: $text-light;
+}

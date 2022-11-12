@@ -1,0 +1,76 @@
+<mjml>
+  <mj-head>
+    <mj-preview>Welcome to the Nexus Community</mj-preview>
+    <mj-title>Nexus Welcome Email</mj-title>
+    <mj-font name="DM Sans" href="https://fonts.googleapis.com/css?family=DM+Sans:400,700" />
+    <mj-style>
+      .link {
+        color: #278B6F;
+        white-space: nowrap;
+      }
+      .list-item {
+        margin-bottom: 10px;
+      }
+      .list-img {
+        margin-right: 10px;
+        margin-bottom: -6px;
+      }
+      @media (min-width: 601px) {
+        .wrapper {
+          padding-left: 25px;
+          padding-right: 25px;
+        }
+        .btn {
+          width: 190px;
+        }
+      }
+    </mj-style>
+    <mj-attributes>
+      <mj-class name="head" font-size="26px" font-weight="700" align="center" />
+      <mj-class name="small" font-size="12px" />
+      <mj-all font-family="DM Sans, Ubuntu, Helvetica, Arial" font-size="14px" color="#252525" line-height="20px" />
+    </mj-attributes>
+  </mj-head>
+  <mj-body background-color="#182C47">
+    <mj-hero  background-color="#182C47">
+      <mj-image src="https://gateway.pinata.cloud/ipfs/QmXsLt7yuQVAZKeFK9Ri1rvF8V1nSrV3MCaVhtbqUGpdfs" width="180px" padding-top="30px" padding-bottom="22px"></mj-image>
+      <mj-image src="https://gateway.pinata.cloud/ipfs/Qmcrr39k9UZewQYp1Bz3K3qdkduVHrdoUZCsJgpYJTZJVG" padding="0"></mj-image>
+    </mj-hero>
+    <mj-section background-color="#ffffff">
+      <mj-column>
+        <mj-text mj-class="head" padding-top="30px">
+          <div class="wrapper">Welcome, Alex &#128075;</div>
+        </mj-text>
+        <mj-text padding-bottom="23px" align="center">
+          <div class="wrapper">
+            <p><b>Thanks for joining the Nexus Community – it’s great to have you onboard!</b></p>
+            <p>At Nexus we’re all about educating and empowering you to take control of your health and wellbeing.</p>
+            <p>Not sure where to begin? We have created a simple <a class="link" href="#">Welcome Guide</a> for new users to help guide you through the app and make the most of your experience. You can learn more about:</p>
+            <div class="list-item">
+              <img class="list-img" src="https://gateway.pinata.cloud/ipfs/QmUdjSnnLWZ1xtGNfRYu1hFHtE7mdd9HzwcyL2M2Egg3F6" width="24px" alt="" ></img>
+              <span class="list-text">How is Nexus complimentary to your hospital care?</span>
+            </div>
+            <div class="list-item">
+              <img class="list-img" src="https://gateway.pinata.cloud/ipfs/QmRUW6aZA938aEkUT8yFGwScsgTrCmVD7bv4BwGk4FqCTn" width="24px" alt="" ></img>
+              <span>What features and content are there on the app?</span>
+            </div>
+            <div class="list-item">
+              <img class="list-img" src="https://gateway.pinata.cloud/ipfs/QmdLxTQD2qyTvNRfrR7FgTFitanLQPXPA1aQE2GAyg1i9o" width="24px" alt="" ></img>
+              <span>How can you share your experiences, seek advice, and connect with like-minded people through the app?</span>
+            </div>
+            <p>You can access this welcome guide at any time. If you require any additional help, you can contact support via the app or email <a class="link" href="mailto:info@nexus-dt.com">info@nexus-dt.com</a></p>
+            <p>Thanks,<br><b>The Nexus Team</b></p>
+          </div>
+        </mj-text>
+        <mj-text  mj-class="small" color="#A3ABB5" align="center" padding-bottom="34px">
+          <div class="wrapper">You received this email because an account in Nexus App has been registered to your email address. If you believe this email is in error, please ignore this email.</div>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section>
+      <mj-column  padding-top="10px" padding-bottom="5px">
+        <mj-text mj-class="small" color="#ffffff" align="center" >© 2021. Nexus. All rights reserved.</mj-text>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

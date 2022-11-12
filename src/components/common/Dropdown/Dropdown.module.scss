@@ -1,0 +1,45 @@
+@import "src/styles/abstracts";
+
+.container {
+  flex: 1;
+}
+
+.btn {
+  background-color: $white;
+  outline: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  width: 100%;
+
+  &:disabled {
+    cursor: default;
+  }
+
+  &.large {
+    font-size: 1.125rem;
+    font-weight: 500;
+    padding: 12px 0;
+  }
+
+  &.small {
+    font-size: 16px;
+    padding: 11px 0;
+  }
+}
+
+.chevron {
+  font-size: 24px;
+}
+
+.icon {
+  font-size: 22px;
+  margin-right: 12px;
+}
+
+.selected {
+  flex: 1;
+  text-align: left;
+}

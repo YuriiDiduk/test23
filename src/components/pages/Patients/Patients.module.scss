@@ -1,0 +1,103 @@
+@import "src/styles/abstracts";
+
+.bgBlock {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  overflow: hidden;
+  font-size: 18px;
+  
+  span {
+    display: block;
+  }
+}
+
+.infoBlock {
+  display: flex;
+  align-items: center;
+
+  @include b(mobile) {
+    flex-wrap: wrap;
+  }
+}
+
+.roomAvatar {
+  margin-right: 30px;
+  position: relative;
+
+  &::before {
+    content: "inactive";
+    text-transform: uppercase;
+    color: $white;
+    background-color: $text-light;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 8px;
+    padding: 4px 10px;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+
+    @include m(tablet) {
+      padding: 4px 21px;
+      bottom: 0;
+    }
+  }
+
+  &.active {
+    &::before {
+      content: "active";
+      background-color: $accent;
+    }
+  }
+}
+
+.info {
+  margin-right: 42px;
+
+  @include b(mobile) {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+.name {
+  margin-bottom: 5px;
+}
+
+.data {
+  font-weight: 500;
+}
+
+.chatBtn {
+  position: relative;
+  margin-left: auto;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: $text-main;
+    top: 12px;
+    left: 32px;
+  }
+
+  &.read {
+    &::before {
+      content: none;
+    }
+  }
+}
+
+.surgeon {
+  font-weight: 700;
+}
+
+.jobTitle {
+  color: $text-light;
+}

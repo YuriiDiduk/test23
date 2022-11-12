@@ -1,0 +1,106 @@
+@import "src/styles/abstracts";
+
+.container {
+  height: 100vh;
+  background-color: $dark;
+  color: $white;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    left: auto;
+  }
+
+  &::before {
+    top: 0;
+    right: 0;
+    width: 45%;
+    height: 60%;
+    background: url("../../../assets/images/top.svg") no-repeat right top;
+    background-size: contain;
+
+    @media screen and (orientation: portrait) {
+      width: 75%;
+    }
+  }
+
+  &::after {
+    top: 3vmin;
+    right: 3vmin;
+    width: 14%;
+    height: 78px;
+    background: url("../../../assets/images/label.svg") no-repeat right top;
+    background-size: contain;
+
+    @include m(desktop) {
+      top: 6vmin;
+      right: 7vmin;
+    }
+
+    @media screen and (orientation: portrait) {
+      width: 30%;
+    }
+  }
+}
+
+.inner {
+  padding: 15px;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.formWrapper {
+  max-width: 411px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  align-self: stretch;
+}
+
+.logoWrapper {
+  max-width: 130px;
+  margin: 0 auto 100px;
+  text-align: center;
+
+  @include m(mobile) {
+    max-width: 176px;
+  }
+}
+
+.logo {
+  width: 100%;
+}
+
+.check {
+  max-width: 116px;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  margin-top: 11vh;
+
+  .link {
+    &:first-child {
+      margin-right: 40px;
+    }
+  }
+}
+
+.link {
+  @extend %link;
+  color: $white;
+  font-size: 14px;
+  font-weight: 400;
+  margin-bottom: 5px;
+}

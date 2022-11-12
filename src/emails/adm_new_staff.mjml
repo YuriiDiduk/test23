@@ -1,0 +1,57 @@
+<mjml>
+  <mj-head>
+    <mj-preview>Welcome to the Nexus Community</mj-preview>
+    <mj-title>Activate your Nexus admin account</mj-title>
+    <mj-font name="DM Sans" href="https://fonts.googleapis.com/css?family=DM+Sans:400,700" />
+    <mj-style>
+      .link {
+        color: #278B6F;
+        white-space: nowrap;
+      }
+      @media (min-width: 601px) {
+        .wrapper {
+          padding-left: 30px;
+          padding-right: 30px;
+        }
+        .btn {
+          width: 190px;
+        }
+      }
+    </mj-style>
+    <mj-attributes>
+      <mj-class name="head" font-size="26px" font-weight="700" align="center" />
+      <mj-class name="small" font-size="12px" />
+      <mj-all font-family="DM Sans, Ubuntu, Helvetica, Arial" font-size="14px" color="#252525" line-height="20px" />
+    </mj-attributes>
+  </mj-head>
+  <mj-body background-color="#182C47">
+    <mj-hero  background-color="#182C47">
+      <mj-image src="https://gateway.pinata.cloud/ipfs/QmXsLt7yuQVAZKeFK9Ri1rvF8V1nSrV3MCaVhtbqUGpdfs" width="180px" padding-top="30px" padding-bottom="22px"></mj-image>
+      <mj-image src="https://gateway.pinata.cloud/ipfs/Qmcrr39k9UZewQYp1Bz3K3qdkduVHrdoUZCsJgpYJTZJVG" padding="0"></mj-image>
+    </mj-hero>
+    <mj-section background-color="#ffffff">
+      <mj-column>
+        <mj-text mj-class="head" padding-top="30px">
+          <div class="wrapper">Hi, Alex</div>
+        </mj-text>
+        <mj-text padding-bottom="23px" align="center">
+          <div class="wrapper">
+            <p> You’ve been given access to the <a class="link" href="https://nxs1-dev.jelvix.dev">Nexus Admin Panel</a> by your company administrator. Please use the button below to set a new password for your account.</p>
+            <p>Once your password is set, you can login using your email address via <a class="link" href="https://nxs1-dev.jelvix.dev/login">this link.</a></p>
+          </div>
+        </mj-text>
+        <mj-button background-color="#baff13" border-radius="16px" font-size="18px" font-weight="700" height="48px" padding-bottom="20px" href="#">
+          <div class="wrapper btn">Reset Password</div>
+        </mj-button>
+        <mj-text  mj-class="small" color="#A3ABB5" align="center" padding-bottom="34px">
+          <div class="wrapper">You received this email because an account in Nexus App has been registered to your email address. If you believe this email is in error, please ignore this email.</div>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section>
+      <mj-column  padding-top="10px" padding-bottom="5px">
+        <mj-text mj-class="small" color="#ffffff" align="center" >© 2021. Nexus. All rights reserved.</mj-text>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

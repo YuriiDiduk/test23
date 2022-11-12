@@ -1,0 +1,96 @@
+<mjml>
+  <mj-head>
+    <mj-preview>Welcome to the Nexus Community</mj-preview>
+    <mj-title>Reset your Nexus password</mj-title>
+    <mj-font name="DM Sans" href="https://fonts.googleapis.com/css?family=DM+Sans:400,700" />
+    <mj-style>
+      .link {
+        color: #278B6F;
+        white-space: nowrap;
+      }
+      .block {
+        border: 1px solid #e5e5e5;
+        border-radius: 16px;
+        padding: 8px;
+        margin-bottom: 16px;
+      }
+      .user {
+        text-align: left;
+        padding: 0 8px;
+      }
+      .user-row {
+        margin: 0;
+      }
+      .user-name {
+        font-size: 16px;
+        line-height: 20px;
+      }
+      @media (min-width: 601px) {
+        .wrapper {
+          padding-left: 30px;
+          padding-right: 30px;
+        }
+        .btn {
+          width: 190px;
+        }
+        .block {
+          padding: 8px 18px 8px 8px;
+        }
+        .user {
+          padding: 0 16px;
+        }
+      }
+    </mj-style>
+    <mj-attributes>
+      <mj-class name="head" font-size="26px" font-weight="700" align="center" />
+      <mj-class name="small" font-size="12px" />
+      <mj-all font-family="DM Sans, Ubuntu, Helvetica, Arial" font-size="14px" color="#252525" line-height="20px" />
+    </mj-attributes>
+  </mj-head>
+  <mj-body background-color="#182C47">
+    <mj-hero  background-color="#182C47">
+      <mj-image src="https://gateway.pinata.cloud/ipfs/QmXsLt7yuQVAZKeFK9Ri1rvF8V1nSrV3MCaVhtbqUGpdfs" width="180px" padding-top="30px" padding-bottom="22px"></mj-image>
+      <mj-image src="https://gateway.pinata.cloud/ipfs/Qmcrr39k9UZewQYp1Bz3K3qdkduVHrdoUZCsJgpYJTZJVG" padding="0"></mj-image>
+    </mj-hero>
+    <mj-section background-color="#ffffff">
+      <mj-column>
+        <mj-text mj-class="head" padding-top="30px">
+          <div class="wrapper">Feedback #6743</div>
+        </mj-text>
+        <mj-text padding-bottom="23px" align="center">
+          <div class="wrapper">
+            <div class="block">
+              <table width="100%">
+                <tbody>
+                  <tr>
+                    <td style="width: 60px; height: 60px">
+                      <img src="https://gateway.pinata.cloud/ipfs/QmQK7mPPgXAJr9nmcdXn3u8frrDqnbCRRQKAz1xuY4WdqL" width="60px" height="60px" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;">
+                    </td>
+                    <td>
+                      <div class="user">
+                        <p class="user-row user-name"><b>Amanda Howard</b></p>
+                        <p class="user-row">amanda_howard@gmail.com</p>
+                        <p class="user-row">+44 077 7984 3434</p>
+                      </div>
+                    </td>
+                    <td style="width: 40px">
+                      <img src="https://gateway.pinata.cloud/ipfs/QmVLzFEAayMH795WjXTKUyGn2xbjgszDrbhnFq1MvcjHLS" width="40px" padding-top="40px" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;">
+                    </td>
+                </tbody>
+              </table>
+            </div>
+            <p style="text-align:left">Cras aliquet velit vitae justo vestibulum facilisis. Nulla placerat metus sit amet sollicitudin consectetur. Aliquam semper tellus ac iaculis posuere ❤️</p>
+          </div>
+        </mj-text>
+        <mj-text  mj-class="small" color="#A3ABB5" align="center" padding-bottom="34px">
+          <div class="wrapper">You received this email because an account in Nexus App has been registered to your email address. If you believe this email is in error, please ignore this email.</div>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section>
+      <mj-column  padding-top="10px" padding-bottom="5px">
+        <mj-text mj-class="small" color="#ffffff" align="center" >© 2021. Nexus. All rights reserved.</mj-text>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

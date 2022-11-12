@@ -1,0 +1,18 @@
+@import "src/styles/abstracts";
+
+.p {
+  margin-bottom: 32px;
+}
+
+.form {
+  margin-bottom: 24px;
+  overflow: hidden;
+}
+
+.link {
+  @extend %link;
+  color: $white;
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}

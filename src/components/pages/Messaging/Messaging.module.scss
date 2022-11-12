@@ -1,0 +1,136 @@
+@import "src/styles/abstracts";
+
+.bgBlock {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.patientInfo {
+  margin: 10px 0;
+}
+
+.delimeter {
+  @include delimiter(28, $accent);
+}
+
+.email {
+  font-size: 18px;
+  font-weight: 500;
+  margin-right: 10px;
+  max-width: 290px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.sendBtn {
+  margin-left: auto;
+}
+
+.chatWrap {
+  @include scroll-container(14px);
+
+  @include m(tablet) {
+    @include scroll-container(20px);
+  }
+}
+
+.messageRow {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+  width: 100%;
+}
+
+.avatar {
+  align-self: flex-start;
+
+  .question & {
+    margin-right: 20px;
+  }
+
+  .answer & {
+    margin-left: 20px;
+  }
+}
+
+.message {
+  max-width: 920px;
+  background-color: $bg;
+  border-radius: $radius-sm;
+  padding: 20px;
+  font-size: 16px;
+
+  .question & {
+    margin-right: 24px;
+  }
+
+  .answer & {
+    margin-left: auto;
+  }
+}
+
+.date {
+  .question & {
+    font-style: italic;
+  }
+}
+
+.answeredQuestion {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 10px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 2px;
+    background-color: $accent;
+  }
+
+  .avatar {
+    margin: 0 12px;
+  }
+}
+
+.questionText {
+  margin: 0;
+  color: $text-light;
+  white-space: nowrap;
+  width: calc(100% - 84px);
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.messageBottom {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: $green-dark;
+  font-size: 14px;
+  cursor: default;
+}
+
+.messageFiles {
+  flex: 1;
+}
+
+.messageFile {
+  margin-right: 30px;
+  white-space: nowrap;
+}
+
+.attachIcon {
+  font-size: 22px;
+  margin-right: 16px;
+  display: inline-block;
+  vertical-align: bottom;
+}

@@ -1,0 +1,30 @@
+@import "src/styles/abstracts";
+
+.sorting {
+  display: flex;
+  align-items: center;
+
+  &:not(:only-child) {
+    margin-right: $margin-header-elements-mob;
+
+    @include m(1200) {
+      margin-right: $margin-header-elements;
+    }
+  }
+}
+
+.sortContainer {
+  width: 160px;
+
+   @include m(mobile) {
+     width: 197px;
+   }
+}
+
+.sortingText {
+  margin-right: 12px;
+  
+  @include b(1199) {
+    display: none;
+  }
+}

@@ -1,0 +1,21 @@
+@import "src/styles/abstracts";
+
+.blockLine {
+  padding-bottom: 24px;
+  border-bottom: 1px solid $border;
+  margin-bottom: 40px;
+}
+
+.opener {
+  font-weight: 700;
+  display: inline-block;
+  border-bottom: 1px dashed $text-main;
+  margin-bottom: 27px;
+  cursor: pointer;
+  transition: 0.15s all;
+
+  &.open, &:hover {
+    color: $accent;
+    border-color: currentColor;
+  }
+}

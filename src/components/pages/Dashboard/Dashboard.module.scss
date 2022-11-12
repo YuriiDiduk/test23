@@ -1,0 +1,91 @@
+@import "src/styles/abstracts";
+
+.bgBlock {
+  padding: 23px 28px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.chartsWrap {
+  @include scroll-container(14px);
+
+  @include m(tablet) {
+    @include scroll-container(20px);
+  }
+}
+
+.charts {
+  margin-bottom: 20px;
+
+  @include m(mobile) {
+    display: flex;
+    align-items: flex-start;
+    align-items: stretch;
+  }
+}
+
+.chartBlock {
+  border-radius: $radius-sm;
+  border: 1px solid $accent;
+  padding: 24px 20px;
+  flex: 1;
+  margin: 0 auto;
+
+  @include b(mobile) {
+    margin-bottom: 15px;
+  }
+
+  @include m(mobile) {
+    width: 50%;
+
+    &:first-child {
+      margin: 0 30px 0 0;
+    }
+  }
+}
+
+.chartWrap {
+  margin-top: 30px;
+
+  @include m(1850) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.chart {
+  width: 220px;
+
+  @include m(mobile) {
+    width: 270px;
+  }
+
+  @include b(1850) {
+    margin: 0 auto 30px;
+  }
+}
+
+.labels {
+  @extend %listreset;
+  font-size: 12px;
+  font-weight: 700;
+  width: 40%;
+  margin-left: 20px;
+}
+
+.label {
+  margin-bottom: 12px;
+  white-space: nowrap;
+}
+
+.marker, .text {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.marker {
+  width: 12px;
+  height: 12px;
+  margin: 0 8px 0 -2px;
+}

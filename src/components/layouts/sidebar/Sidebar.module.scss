@@ -1,0 +1,112 @@
+@import "src/styles/abstracts";
+
+.container {
+  @include animate(transform);
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: $sidebar_width;
+  height: 100%;
+  border-radius: 20px;
+  box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.07);
+  padding: 32px 0;
+  background-color: $white;
+  z-index: 1;
+  transform: translateX(-110%);
+  z-index: 2;
+
+  @include m(tablet) {
+    position: relative;
+    transform: translateX(0);
+  }
+
+  .open & {
+    transform: translateX(0);
+  }
+}
+
+.close {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  text-align: center;
+
+  span {
+    font-size: 24px;
+  }
+}
+
+.logoWrapper {
+  width: 117px;
+  margin: 0 auto 28px;
+  text-align: center;
+}
+
+.logo {
+  width: 100%;
+}
+
+.nav {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu,
+.staticNav {
+  @extend %listreset;
+}
+
+.menu {
+  .item {
+    &.current {
+      .link {
+        background-color: $highlight;
+      }
+    }
+  }
+
+  .link {
+    @include animate(background-color, 0.1s);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 20px;
+
+    text-decoration: none;
+    color: inherit;
+    padding: 14px 12px 15px;
+    display: block;
+    border-radius: 16px;
+
+    &:hover {
+      background-color: $highlight;
+    }
+  }
+}
+
+.staticNav {
+  margin-top: 20px;
+
+  .item {
+    &.current {
+      .link {
+        color: $text-main;
+      }
+    }
+  }
+
+  .link {
+    @include animate(color, 0.1s);
+    text-decoration: none;
+    color: $text-light;
+    padding: 6px 12px 6px;
+    display: block;
+    font-weight: 700;
+
+    &:hover,
+    .current & {
+      color: $text-main;
+    }
+  }
+}
