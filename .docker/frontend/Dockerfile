@@ -5,7 +5,7 @@ WORKDIR /app
 COPY package.json ./
 RUN npm i --silent
 COPY . ./
-RUN npm run build
+RUN npm run build -prod
 
 
 # production environment
