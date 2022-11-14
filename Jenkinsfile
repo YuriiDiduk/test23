@@ -10,7 +10,7 @@ pipeline {
         ENVIRONMENT = "dev"
         APP_NAME = "gstt"
         DOCKER_FILE_BACKEND = ".docker/frontend/Dockerfile"
-        SWARM_MANAGER_IP = "172-31-19-101"
+        SWARM_MANAGER_IP = "172.31.19.101"
     }
    
     stages {
