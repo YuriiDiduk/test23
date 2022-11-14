@@ -3,9 +3,10 @@ FROM node:16.15.1-stretch as build
 
 WORKDIR /app
 COPY package.json ./
+RUN npm install -g npm@9.1.1` to update
 RUN npm i --silent
 COPY . ./
-RUN npm run build -prod
+RUN npm run build
 
 
 # production environment
