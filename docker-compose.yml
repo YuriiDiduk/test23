@@ -2,11 +2,11 @@ version: '3.7'
 
 services:
   front:
-    image: "nxs-develop.jelvix.dev/nxs1_frontend:${TAG}"
+    image: "517991762053.dkr.ecr.us-east-1.amazonaws.com/gstt:${TAG}"
     networks:
       - nxsone
     ports:
-      - "80:80"
+      - "81:80"
     deploy:
       replicas: 1
       restart_policy:
