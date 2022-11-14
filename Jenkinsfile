@@ -72,7 +72,7 @@ pipeline {
      steps{  
          script {
                IMMAGE_TAG = "${ENVIRONMENT}.FE.${env.BUILD_NUMBER}".replace('/','-')
-                sh "export TAG=${IMAGE_TAG} && docker stack deploy --compose-file docker-compose.yml --with-registry-auth '${APP_NAME}_${ENVIRONMENT}'"
+                sh "export TAG=${IMMAGE_TAG} && docker stack deploy --compose-file docker-compose.yml --with-registry-auth '${APP_NAME}_${ENVIRONMENT}'"
               }
          
  
