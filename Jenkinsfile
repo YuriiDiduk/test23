@@ -10,6 +10,7 @@ pipeline {
         ENVIRONMENT = "dev"
         APP_NAME = "gstt"
         DOCKER_FILE_BACKEND = ".docker/frontend/Dockerfile"
+        SWARM_MANAGER_IP = "172-31-26-2"
     }
    
     stages {
@@ -72,7 +73,7 @@ pipeline {
              withDockerServer([uri: '172-31-26-2']) {
  
                IMMAGE_TAG = "${ENVIRONMENT}.FE.${env.BUILD_NUMBER}".replace('/','-')
-                sh "export TAG=${IMMAGE_TAG} && docker stack deploy --compose-file docker-compose.yml --with-registry-auth '${APP_NAME}_${ENVIRONMENT}'"
+                sh "export TAG=${IMMAGE_TAG} && docker -H tcp://${SWARM_MANAGER_IP}:2375 docker stack deploy --compose-file docker-compose.yml --with-registry-auth '${APP_NAME}_${ENVIRONMENT}'"
               
                   }
              }
