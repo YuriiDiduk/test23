@@ -1,5 +1,5 @@
 # build environment
-FROM node:10.24.1-stretch as build
+FROM node:18.12.1 as build
 
 WORKDIR /app
 COPY package.json ./
