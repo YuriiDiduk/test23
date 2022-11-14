@@ -2,7 +2,7 @@ version: '3.7'
 
 services:
   front:
-    image: "517991762053.dkr.ecr.us-east-1.amazonaws.com/gstt:${TAG}"
+    image: "821508263462.dkr.ecr.eu-west-2.amazonaws.com/gstt:${TAG}"
     networks:
       - nxsone
     ports:
