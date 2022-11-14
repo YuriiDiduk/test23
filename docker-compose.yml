@@ -2,7 +2,7 @@ version: '3.7'
 
 services:
   front:
-    image: "${REPOSITORY_URI}/gstt:${TAG}"
+    image: "${REPOSITORY_URI}:${TAG}"
     networks:
       - nxsone
     ports:
