@@ -48,8 +48,6 @@ pipeline {
                     dockerImage = docker.build("${IMAGE_REPO_NAME}:${IMAGE_TAG}", "-f ${DOCKER_FILE_BACKEND} .")
                     
                      }
-                 
-            
             }            
         }
         
@@ -71,9 +69,13 @@ pipeline {
       stage('Deploy to dev') {
      steps{  
          script {
+             withDockerServer([uri: '172-31-26-2']) {
+ 
                IMMAGE_TAG = "${ENVIRONMENT}.FE.${env.BUILD_NUMBER}".replace('/','-')
                 sh "export TAG=${IMMAGE_TAG} && docker stack deploy --compose-file docker-compose.yml --with-registry-auth '${APP_NAME}_${ENVIRONMENT}'"
-              }
+              
+                  }
+             }
          
  
         }
