@@ -1,59 +1,95 @@
 pipeline {
-    parameters {
-        gitParameter branch: '', branchFilter: 'origin/(.*)', defaultValue: 'develop', name: 'BRANCH_NAME', quickFilterEnabled: true, selectedValue: 'DEFAULT', sortMode: 'ASCENDING_SMART', tagFilter: '*', type: 'PT_BRANCH'    }
-    environment {
-        JENKINS_SSHKEY = "402ac039-a02f-4f9f-85c0-60944dbb8f50"
-        REGISTRY_URL = "https://nxs-develop.jelvix.dev"
-        REGISTRY_NAME = "nxs-develop.jelvix.dev"
-        REGISTRY_CRD = "53713aa6-2029-49af-bb88-1418bbc3a07c"
-        DEPLOY_HOST = "175.15.10.25"
-        APP_NAME = "nxs1"
-        ENV_NAME = "dev"
-        image_tag = 'latest'
-    }
     agent any
-    stages {
-        stage('Build images') {
-            steps {
-                script{
-                    dockerImage = docker.build("${REGISTRY_NAME}/nxs1_frontend:${BRANCH_NAME}", "--label commitId=${GIT_COMMIT}  --label branch=${GIT_BRANCH} --label buildId=${env.BUILD_NUMBER} --rm -f .docker/frontend/Dockerfile .")
-                }
-            }
-        }
-        stage('Push images to registry') {
-            steps {
-                script {
-                    if ('${BRANCH_NAME}' == 'release') {
-                        image_tag = '1.0.$env.BUILD_NUMBER'
-                    } else {
-                        image_tag = "${BRANCH_NAME}.${env.BUILD_NUMBER}".replace('/','-')
-                    } 
-                    withDockerRegistry(credentialsId: "${REGISTRY_CRD}", url: "${REGISTRY_URL}")  {
-                        if ('${BRANCH_NAME}' == 'master') {
-                           dockerImage.push("latest")
-                        } else {
-                        dockerImage.push ("${image_tag}")
-                        }
-                    }
-                }
-            }
-        }
-        stage ('Deploy to environment') {
-            steps {
-                script {
-                    withDockerServer(credentialsId:"${REGISTRY_CRD}", uri:"${DEPLOY_HOST}") {
-                        withDockerRegistry(credentialsId: "${REGISTRY_CRD}", url: "${REGISTRY_URL}") {
-                            sh "export TAG=${image_tag} && docker stack deploy --compose-file docker-compose.yml --with-registry-auth '${APP_NAME}_${ENV_NAME}'"
-                        }
-                    }
-                }
-            }
-        }
+    parameters { choice(name: 'ENVIRONMENT', choices: ['Develop', 'Staging', 'Production'], description: 'Pick something')}
+    environment {
+        AWS_ACCOUNT_ID="605060434181"
+        AWS_DEFAULT_REGION="us-east-1"
+        IMAGE_REPO_NAME="gstt"
+        IMAGE_TAG="v1"
+        REPOSITORY_URI = "605060434181.dkr.ecr.us-east-1.amazonaws.com/gstt"
+        ENVIRONMENT = "dev"
+        APP_NAME = "gstt"
+        DOCKER_FILE_BACKEND = ".docker/frontend/Dockerfile"
     }
+   
+    stages {
+        
+         stage('Logging into AWS ECR') {
+            steps {
+                script {
+                sh """aws ecr get-login-password --region ${AWS_DEFAULT_REGION} | docker login --username AWS --password-stdin ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com"""
+                }
+                 
+            }
+        }
+        
+        
+        stage ('Deploy -- [ DEVELOP ] -- environment') {
+            when {
+                expression {
+                    return params.ENVIRONMENT == 'Develop';
+                }
+            }
+            steps {
+                //  First: change git URL
+                checkout([$class: 'GitSCM', branches: [[name: '*/develop']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/YuriiDiduk/test23.git']]])
+                
+                
+              //  script {
+              //      withCredentials([file(credentialsId: '!!1f079c05-a818-45c6-8fe1-dbf716e08396', variable: 'ENV_FILE')]) {
+              //          sh 'cat $ENV_FILE > .env'
+              //      }
+              //  }
+                
+                
+                script {
+ 
+ 
+                    dockerImage = docker.build("${IMAGE_REPO_NAME}:${IMAGE_TAG}", "-f ${DOCKER_FILE_BACKEND} .")
+                    
+                     }
+                 
+            
+            }            
+        }
+        
+   stage('Pushing to ECR') {
+     steps{  
+         script {
+                IMMAGE_TAG = "${ENVIRONMENT}.FE.${env.BUILD_NUMBER}".replace('/','-')
+                
+                sh """docker tag ${IMAGE_REPO_NAME}:${IMAGE_TAG} ${REPOSITORY_URI}:$IMMAGE_TAG"""
+               // sh """docker push ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/${IMAGE_REPO_NAME}:${IMAGE_TAG}"""
+               sh """docker push ${REPOSITORY_URI}:${IMMAGE_TAG}"""
+         }
+                  
+ 
+        }
+      }
+      
+      
+      stage('Deploy to dev') {
+     steps{  
+         script {
+               IMMAGE_TAG = "${ENVIRONMENT}.FE.${env.BUILD_NUMBER}".replace('/','-')
+                sh "export TAG=${IMAGE_TAG} && docker stack deploy --compose-file docker-compose.yml --with-registry-auth '${APP_NAME}_${ENVIRONMENT}'"
+              }
+         
+ 
+        }
+      }
+        
+ 
+    }
+    
     post {
         always {
-            echo 'Clear workspace'  
+            script {
+                sh 'docker image prune -f && docker container prune -f'
+                
+            }
+            echo 'Clear workspace'
             cleanWs()
         }
-    }  
+    }
 }
