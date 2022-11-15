@@ -20,6 +20,7 @@ pipeline {
                 }
             }
         }
+        //ferwr
         stage('Push images to registry') {
             steps {
                 script {
