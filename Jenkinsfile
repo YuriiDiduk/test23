@@ -2,15 +2,15 @@ pipeline {
     agent any
     parameters { choice(name: 'ENVIRONMENT', choices: ['Develop', 'Staging', 'Production'], description: 'Pick something')}
     environment {
-        AWS_ACCOUNT_ID="605060434181"
+        AWS_ACCOUNT_ID="616987080657"
         AWS_DEFAULT_REGION="us-east-1"
-        IMAGE_REPO_NAME="gstt"
+        IMAGE_REPO_NAME="my1nexus"
         IMAGE_TAG="v1"
-        REPOSITORY_URI = "605060434181.dkr.ecr.us-east-1.amazonaws.com/gstt"
+        REPOSITORY_URI = "616987080657.dkr.ecr.us-east-1.amazonaws.com/my1nexus"
         ENVIRONMENT = "dev"
         APP_NAME = "gstt"
         DOCKER_FILE_BACKEND = ".docker/frontend/Dockerfile"
-        SWARM_MANAGER_IP = "172.31.26.2"
+        SWARM_MANAGER_IP = "10.0.1.89"
     }
    
     stages {
